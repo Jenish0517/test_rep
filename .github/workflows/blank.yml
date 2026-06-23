@@ -1,10 +1,19 @@
 name: tesing
 on: workflow_dispatch
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build step
+        run: echo "First Build"
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: step 1
-        run: |
-          echo "Welcome to GHA"
-          echo "this is second linee"
+      - name: Test phase
+        run: echo "Running test"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy phase
+        run: echo "deploying the project"
