@@ -1,21 +1,8 @@
 name: tesing
-on: workflow_dispatch
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Build step
         run: echo "First Build"
-  test:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Test phase
-        run: echo "Running test"
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - name: Deploy phase
-        run: echo "deploying the project"
