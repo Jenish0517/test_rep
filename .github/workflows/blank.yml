@@ -1,0 +1,8 @@
+name: tesing
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step 1
+        run: echo "Welcome to GHA"
